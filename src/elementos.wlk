@@ -6,7 +6,7 @@ class Hogar {
 }
 
 class Huerta {
-  var proterty capacidadDeProduccion
+  var property capacidadDeProduccion
   
   method esBueno() = capacidadDeProduccion > nivelDeHuertas.nivelDeReferencia()
 }
