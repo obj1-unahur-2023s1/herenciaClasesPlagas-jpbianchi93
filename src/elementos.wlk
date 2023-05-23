@@ -1,14 +1,15 @@
 class Hogar {
-  var property mugre
+  var property nivelDeMugre
   var property confort
   
-  method esBueno() = mugre >= confort/2
+  method esBueno() = nivelDeMugre <= confort/2
 }
 
 class Huerta {
   var property capacidadDeProduccion
+  var property nivelDeProduccion = produccion
   
-  method esBueno() = capacidadDeProduccion > nivelDeHuertas.nivelDeReferencia()
+  method esBueno() = capacidadDeProduccion > nivelDeProduccion.nivel()
 }
 
 class Mascota {
@@ -17,14 +18,17 @@ class Mascota {
   method esBueno() = nivelDeSalud > 250
 }
 
-object nivelDeHuertas {
-  var property nivelDeReferencia
+object produccion {
+  var property nivel
 }
 
 class Barrio {
   const property elementos = []
   
-  method elementosBuenos() = elemento.count({e=>e.esBueno()})
-  method elementosNoBuenos() = elemento.count({e=>!e.esBueno()}) 
+  method agregarElemento(unElemento) {elemento.add(unElemento)}
+  mehod quitarElemento(unElemento) {elemento.remove(unElemento)}
+  
+  method cantElementosBuenos() = elemento.count({e=>e.esBueno()})
+  method cantElementosNoBuenos() = elemento.count({e=>!e.esBueno()}) 
   method esCopado() = self.elementosBuenos() > self.elementosNoBuenos()
 }
