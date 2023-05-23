@@ -16,7 +16,7 @@ class Cucaracha inherits Plaga {
   method nivelDeDanio() = poblacion/2
   override method transmiteEnfermedades() = super() && pesoPromedio >= 10
   override method atacar(unElemento){
-    super(unElemeno) 
+    super(unElemento) 
     pesoPromedio +=2
   }
 }
