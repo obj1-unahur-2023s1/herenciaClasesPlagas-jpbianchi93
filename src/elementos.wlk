@@ -7,9 +7,8 @@ class Hogar {
 
 class Huerta {
   var proterty capacidadDeProduccion
-  var nivelDeHuertas
   
-  method esBueno() = capacidadDeProduccion > nivelDeHuertas
+  method esBueno() = capacidadDeProduccion > nivelDeHuertas.nivelDeReferencia()
 }
 
 class Mascota {
